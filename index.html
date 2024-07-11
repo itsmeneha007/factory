@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    //Problem 1
+
+    function iPhone1(ASIN, color, display, camera){
+        let obj = {};
+        obj.ASIN= ASIN;
+        obj.color = color;
+        obj.display = display;
+        obj.camera = camera;
+
+        obj.dial = function (){
+            return "tring...tring..."
+
+        };
+        obj.sendMessage = function (){
+            return"Sending message";
+        };
+        obj.cameraClick = function(){
+            return"Camera clicked"
+        }
+
+        return obj
+    }
+
+    let m1 = iPhone1(1234, "white", "10 MP" )
+    console.log(m1);
+
+    console.log(m1.dial);
+    console.log(m1.sendMessage);
+    console.log(m1.cameraClick);
+
+
+    //Problem 2
+
+    function iPhone2(ASIN, color, display, camera, bluetooth){
+        let obj = {};
+        obj.ASIN = ASIN;
+        obj.color = color;
+        obj.display = display;
+        obj.camera = camera;
+        obj.bluetooth = bluetooth;
+
+        obj.dial = function(){
+            return"tring...tring..."
+        }
+
+        obj.sendMessage = function(){
+            return"Sending message";
+        }
+
+        obj.cameraClick=function (){
+            return"Camera clicked"
+        }
+
+        obj.connectBluetooth=function(){
+            return"Bluetooth connected successfully"
+        }
+        return obj;
+
+
+    }
+    
+
+    let m2 = iPhone2(12345, "black", "12 MP", "connected")
+    console.log(m2);
+
+    console.log(m2.dial);
+    console.log(m2.sendMessage);
+    console.log(m2.cameraClick);
+    console.log(m2.connectBluetooth);
+
+
+
+</script>
