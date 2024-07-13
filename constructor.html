@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constructor & .call</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    function iPhone3(ASIN, color, display, camera, bluetooth){
+        this.ASIN = ASIN
+        this.color = color
+        this.display = display
+        this.camera = camera
+        this.bluetooth = bluetooth
+
+        this.dial = function(){
+            console.log("tring..tring..")
+        };
+
+        this.sendMessage = function(){
+            return"Sending message"
+        };
+
+        this.cameraClick = function(){
+            return"Camera clicked"
+        };
+
+        this.connectBluetooth = function(){
+            return"Bluetoth connected successfully"
+        };
+
+        
+    }
+
+    let iPhone1={};
+    iPhone3.call(iPhone1, "a01k2", "pink", "screen", "12 MP", "connected successfully");
+        console.log(iPhone1);
+
+        let iPhone2 = {};
+        iPhone3.call(iPhone2,"12k4t", "golden", "big screen", "10 MP", "not connected");
+        console.log(iPhone2);
+
+
+    
+
+    
+
+</script>
