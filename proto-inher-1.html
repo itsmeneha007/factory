@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    class Person{
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+
+    }
+
+    static greet(){
+        return"Hello there"
+    }
+    cansleep(){
+        return`${this.name} is sleeping`
+    }
+}
+
+const person = new Person("John", 24)
+console.log(person)
+console.log(person.cansleep())
+
+
+class Employee extends Person{
+    #salary;
+
+    get salary(){
+        return this.salary;
+    }
+    set salary(amount){
+        if(amount > 0){
+            this.#salary = amount
+        }else{
+            console.log("salary must be a possitive number")
+        }
+    }
+    working(){
+        return `${this.name} is working`
+    }
+}
+
+const e1 = new Employee("Shiva", 20)
+e1.salary = 20000;
+console.log(e1)
+console.log(e1.working())
+// console.log(e1.salary)
+
+
+
+class Manager extends Employee{
+    static getRole(){
+        return "Manager"
+    }
+    managing (){
+        return`${this.name} is managing`
+    }
+}
+const m1 = new Manager("Jack", 25)
+console.log(Manager.getRole())
+console.log(m1.managing())
+
+
+
+class Executive extends Manager{
+    #bonus;
+
+    get bonus(){
+        return this.#bonus 
+    }
+    set bonus(amount){
+       if(amount > 0){
+        this.#bonus = amount;
+       }
+    }
+}
+
+const exe = new Executive("Rory", 28)
+exe.salary = 80000;
+exe.bonus = 10000;
+console.log(exe.managing())
+// console.log(exe.salary)
+// console.log(exe.bonus)
+</script>
